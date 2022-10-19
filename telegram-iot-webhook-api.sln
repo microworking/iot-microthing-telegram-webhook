@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{654E666E-7085-4472-9E57-C5BAAFCFAB80}"
+	ProjectSection(SolutionItems) = preProject
+		Solution\README.md = Solution\README.md
+		TelegramIotDB.sql = TelegramIotDB.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api", "Microworking.Iot.Telegram.Webhook.Api\Microworking.Iot.Telegram.Webhook.Api.csproj", "{F79D0CF7-FF5E-47AE-88A5-40BD30D0F385}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api.Application", "Microworking.Iot.Telegram.Webhook.Api.Application\Microworking.Iot.Telegram.Webhook.Api.Application.csproj", "{614CE4AB-D2BB-468A-B946-20D75E58B75B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api.Data", "Microworking.Iot.Telegram.Webhook.Api.Data\Microworking.Iot.Telegram.Webhook.Api.Data.csproj", "{08A39D76-C65D-4B9A-9750-BC29D9E5C20E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api.Domain", "Microworking.Iot.Telegram.Webhook.Api.Domain\Microworking.Iot.Telegram.Webhook.Api.Domain.csproj", "{66334809-D244-4C06-A01D-CB5BAE6DBDB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api.Infrastructure", "Microworking.Iot.Telegram.Webhook.Api.Infrastructure\Microworking.Iot.Telegram.Webhook.Api.Infrastructure.csproj", "{ADCFC247-15C7-4323-9156-C2E5C76495AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microworking.Iot.Telegram.Webhook.Api.Ioc", "Microworking.Iot.Telegram.Webhook.Api.Ioc\Microworking.Iot.Telegram.Webhook.Api.Ioc.csproj", "{17EC8974-EAE4-4E18-865D-70DB03A15B74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F79D0CF7-FF5E-47AE-88A5-40BD30D0F385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79D0CF7-FF5E-47AE-88A5-40BD30D0F385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79D0CF7-FF5E-47AE-88A5-40BD30D0F385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79D0CF7-FF5E-47AE-88A5-40BD30D0F385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{614CE4AB-D2BB-468A-B946-20D75E58B75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614CE4AB-D2BB-468A-B946-20D75E58B75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614CE4AB-D2BB-468A-B946-20D75E58B75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614CE4AB-D2BB-468A-B946-20D75E58B75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A39D76-C65D-4B9A-9750-BC29D9E5C20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A39D76-C65D-4B9A-9750-BC29D9E5C20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A39D76-C65D-4B9A-9750-BC29D9E5C20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A39D76-C65D-4B9A-9750-BC29D9E5C20E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66334809-D244-4C06-A01D-CB5BAE6DBDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66334809-D244-4C06-A01D-CB5BAE6DBDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66334809-D244-4C06-A01D-CB5BAE6DBDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66334809-D244-4C06-A01D-CB5BAE6DBDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCFC247-15C7-4323-9156-C2E5C76495AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCFC247-15C7-4323-9156-C2E5C76495AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCFC247-15C7-4323-9156-C2E5C76495AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCFC247-15C7-4323-9156-C2E5C76495AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17EC8974-EAE4-4E18-865D-70DB03A15B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EC8974-EAE4-4E18-865D-70DB03A15B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EC8974-EAE4-4E18-865D-70DB03A15B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EC8974-EAE4-4E18-865D-70DB03A15B74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4369C5F8-E8B2-4323-B52B-40697A0180FA}
+	EndGlobalSection
+EndGlobal

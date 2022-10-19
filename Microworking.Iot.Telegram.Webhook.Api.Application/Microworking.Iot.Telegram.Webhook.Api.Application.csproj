@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.6" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.1" />
+    <PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="3.6.0" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Refit" Version="6.3.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Responses\" />
+    <Folder Include="Commands\Requests\" />
+    <Folder Include="Common\" />
+    <Folder Include="Queries\Requests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microworking.Iot.Telegram.Webhook.Api.Domain\Microworking.Iot.Telegram.Webhook.Api.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

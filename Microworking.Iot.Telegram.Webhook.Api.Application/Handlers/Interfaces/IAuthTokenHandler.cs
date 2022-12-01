@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Microworking.Iot.Telegram.Webhook.Api.Domain.Entities;
 
 namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers.Interfaces
@@ -8,5 +9,7 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers.Interfaces
         public IdentityDTO GetIdentity(HttpRequest Request);
 
         public IdentityDTO GetIdentity(string IndetityToken);
+
+        public IEnumerable<IdentityDTO> GetIdentity(string Uid, string IndetityToken);
     }
 }

@@ -36,14 +36,6 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers
                 action = Action.ActionCommand,
                 date = DateTime.UtcNow.AddDays(-3)
             };
-           
-            //switch(Action.ActionCommand)
-            //{
-            //    case "BEEP":
-
-            //        break;
-
-            //}
 
             await _mqttActionsService.PublishAsync(payload);
         }

@@ -8,6 +8,7 @@ using Microworking.Iot.Telegram.Webhook.Api.Application.Repositories;
 using Microworking.Iot.Telegram.Webhook.Api.Domain.Entities.Telegram;
 using Microworking.Iot.Telegram.Webhook.Api.Application.Commands.Requests;
 using Microworking.Iot.Telegram.Webhook.Api.Application.Handlers.Interfaces;
+using System.Collections.Generic;
 
 namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers
 {
@@ -36,6 +37,21 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers
         public async Task<IActionResult> Handle(SendMessageRequest Request, IdentityDTO Identity)
         {
             return (IActionResult)await _telegramApiRepository.Notify(Request, Identity);
+        }
+
+        public async Task<IActionResult> Handle(string Message, List<IdentityDTO> Identities)
+        {
+            foreach (IdentityDTO identity in Identities)
+            {
+                if (identity.IsAuthorized)
+                {
+                    SendMessageRequest message = new SendMessageRequest();
+                    message.chat_id = identity.ChatId;
+                    message.text = Message;
+                    _telegramApiRepository.Notify(message, identity);
+                }
+            }
+            return null;
         }
     }
 }

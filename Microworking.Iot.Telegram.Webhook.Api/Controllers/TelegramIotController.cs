@@ -66,22 +66,24 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Controllers
         {
             try
             {
-                _logger.LogInformation($"[{GetType()}] Inicio");
+                _logger.LogInformation($"[{GetType()}] Request action: { request.message.text }");
 
                 IdentityDTO identity = _authTokenHandler.GetIdentity(Request);
                 if (!identity.IsAuthorized)
                     return StatusCode(StatusCodes.Status401Unauthorized, new Resultado { Mensagem = "Unauthorized.", Retorno = null });
                 request.Identity = identity;
 
+                _logger.LogInformation($"[{GetType()}] IndentyToken: { identity.IndentyToken }, AuthToken: { identity.AuthToken }, ChatId: { identity.ChatId }");
+
                 var retorno = await _mediator.Send(request);
 
-                _logger.LogInformation($"[{GetType()}] Fim");
+                _logger.LogInformation($"[{GetType()}] Action executed with success");
 
                 return Ok(null);
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "xxxxxxxxxxxxxxxx");
+                _logger.LogError(exception, "Has a error executing set action request");
                 return StatusCode(500, new Resultado { Mensagem = exception.Message, Retorno = exception.StackTrace });
             }
         }

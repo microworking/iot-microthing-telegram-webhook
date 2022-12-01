@@ -28,9 +28,14 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Infrastructure.Repositories
                 
                 request.chat_id = identity.ChatId;
 
-                Message response = await Rest<ITelegramRestApi>().Notify(request);
-                
-                return (Message)response;
+                try 
+                {
+                    var response = await Rest<ITelegramRestApi>().Notify(request);
+                    return (Message)response;
+                }
+                catch(Exception ex){}
+
+                return null;
             }
             catch (Exception ex)
             {

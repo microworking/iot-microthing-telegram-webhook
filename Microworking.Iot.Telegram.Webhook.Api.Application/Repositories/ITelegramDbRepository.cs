@@ -14,10 +14,14 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Repositories
 
         public IdentityDTO GetIdentity(string SecretToken);
 
+        public IEnumerable<IdentityDTO> GetIdentity(string Uid, string SecretToken);
+
         public ActionCommandDTO GetActionCommand(List<string> Terms);
 
         public string GetRoom(string Token, List<string> Terms);
 
         public DeviceModelDTO GetDeviceProperties(string Token, string Room, List<string> Terms);
+
+        public DeviceModelDTO GetPeripheral(string Uid);
     }
 }

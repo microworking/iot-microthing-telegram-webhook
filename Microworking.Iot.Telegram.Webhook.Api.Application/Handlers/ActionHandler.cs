@@ -70,24 +70,24 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers
                     //templates txt
                     break;
 
-                case (int)ActionTypeEnum.DeviceAction:
-                    if (!string.IsNullOrEmpty(room))
-                    {
-                        DeviceModelDTO device = this.FindDevice(identity.IndentyToken, room, Terms);
-                        if (device != null)
-                            message.text = _mqttActionHandler.Handle(Request, action, device).Result;
-                        else
-                        {
-                            message.text = $"O periférico informado para o ambiente { room } não foi localizado!";
-                        }
-                    }
-                    else
-                    {
-                        //TODO: implementar para ligar todos perifericos
-                        message.text = $"Informe o ambiente e um periférico válido para sua ação!";
-                    }
-                    break;
-                    //_mqttTestActionHandler.ToString();
+                //case (int)ActionTypeEnum.ActionNotFound:
+                //    if (!string.IsNullOrEmpty(room))
+                //    {
+                //        DeviceModelDTO device = this.FindDevice(identity.IndentyToken, room, Terms);
+                //        if (device != null)
+                //            message.text = _mqttActionHandler.Handle(Request, action, device).Result;
+                //        else
+                //        {
+                //            message.text = $"O periférico informado para o ambiente { room } não foi localizado!";
+                //        }
+                //    }
+                //    else
+                //    {
+                //        //TODO: implementar para ligar todos perifericos
+                //        message.text = $"Informe o ambiente e um periférico válido para sua ação!";
+                //    }
+                //    break;
+                //    //_mqttTestActionHandler.ToString();
 
                     //beep - teste mqtt
                     //dados técnicos do mcu

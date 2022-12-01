@@ -95,7 +95,12 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Services
 
             ActionPayload action = JsonSerializer.Deserialize<ActionPayload>(eventArgs.ApplicationMessage.Payload);
 
-            _getActionHandler.Handle(action);
+            ActionPayload reaction = _getActionHandler.Handle(action).Result;
+
+            if (action.identity_token == "8o1nx9zfTFUiAkYdgWR3GUlX9fxpREFOQw1dtoidR0jfa5ihR0alIj9GmuV4YrIE" && action.action == "ping")
+            {
+                _ = this.PublishAsync(reaction);
+            }
 
             return null;
         }

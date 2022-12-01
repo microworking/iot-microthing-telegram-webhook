@@ -28,17 +28,20 @@ namespace Microworking.Iot.Telegram.Webhook.Api.Application.Handlers
                 uid = Device.Uid,
                 gpio = Device.Gpio,
                 action = Action.ActionCommand,
+                owner = Request.Identity.Owner,
                 update_id = Request.update_id,
                 chat_id = Request.Identity.ChatId,
                 message_id = Request.message.message_id,
                 peripheral = Device.Name,
+                message = "",
                 date = DateTime.UtcNow.AddDays(-3)
             };
 
             bool result = await _mqttActionsService.PublishAsync(payload);
 
             if(result)
-                return $"Iniciando o atendimento da solicitação { Action.ActionName.ToLower() } para o periférico { Device.Name.ToLower() }";
+                //return $"Iniciado o atendimento da solicitação { Action.ActionName.ToLower() } para o periférico { Device.Name.ToLower() }";
+                return string.Empty;
             else
                 return $"Ocorreu um erro e o atendimento da solicitação { Action.ActionName.ToLower() } para o periférico { Device.Name.ToLower() } não pode ser iniciada";
         }
